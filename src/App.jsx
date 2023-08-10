@@ -1,5 +1,6 @@
 import './App.css'
 import Presentacion from './components/Presentacion'
+import Barra from './components/Barra'
 import { ThemeProvider } from '@mui/material'
 import temas from './ThemeProvider'
 import { useState } from 'react'
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={tema}>
-        
+        <Barra />
         <Presentacion />
       </ThemeProvider>
     </>
