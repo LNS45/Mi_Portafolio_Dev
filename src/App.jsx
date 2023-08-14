@@ -4,11 +4,12 @@ import Barra from './components/Barra'
 import { ThemeProvider } from '@mui/material'
 import temas from './ThemeProvider'
 import { useState } from 'react'
+import Menu from './components/Menu'
 
 function App() {
-  const temaClaro = temas[0];
-  const temaOscuro = temas[1];
-  let [tema, setTema] = useState(temaClaro);
+  //Tema claro por defecto
+  let [tema, setTema] = useState(temas[0]);
+  const [menuActive, setMenuActive] = useState(false);
 
   //Color del body dependiendo del Tema
   document.body.style.background = tema.palette.primary.light;
@@ -16,7 +17,8 @@ function App() {
   return (
     <>
       <ThemeProvider theme={tema}>
-        <Barra />
+        <Barra handleMenu={{setMenuActive, menuActive}} handleTheme={{tema, setTema}}/>
+        <Menu menu={menuActive}/>
         <Presentacion />
       </ThemeProvider>
     </>

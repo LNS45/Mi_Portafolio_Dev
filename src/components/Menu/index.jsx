@@ -1,4 +1,4 @@
-import { Drawer } from "@mui/material";
+import { Drawer, Typography } from "@mui/material";
 import "./style.css"
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -11,18 +11,37 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import { useTheme } from "@emotion/react";
 
-const Menu = () => {
 
+const Menu = (props) => {
+    const menuActive = props.menu;
+    const tema = useTheme();
+    const menuStyle = {
+        zIndex: 1,
+        '& .MuiDrawer-paper': {
+            background: tema.palette.secondary.main,
+            width: "200px",
+            position: "fixed",
+            top: "3.75rem",
+            color: tema.palette.secondary.contrastText,
+        },
+    };
+    const letraStyle = {
+        fontFamily: tema.typography.fontFamily,
+        fontWeight: tema.typography.fontWeight,
+        fontSize: tema.typography.fontSize
+    }
 
-    return <Drawer type="left" anchor="left" open='true' variant='temporary' color="primary">;
-        <List >
+    return <Drawer type="left" anchor="left" open={menuActive} variant='temporary' sx={menuStyle} hideBackdrop={true}
+    >
+        <List>
             <ListItemButton>
                 <ListItem>
                     <ListItemIcon>
                         <HomeOutlinedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Inicio"/>
+                    <ListItemText><Typography sx={letraStyle}>Inicio</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
             <ListItemButton>
@@ -30,7 +49,7 @@ const Menu = () => {
                     <ListItemIcon>
                         <ComputerOutlinedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Habilidades"/>
+                    <ListItemText><Typography sx={letraStyle}>Habilidades</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
             <ListItemButton>
@@ -38,7 +57,7 @@ const Menu = () => {
                     <ListItemIcon>
                         <SchoolOutlinedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Educación"/>
+                    <ListItemText><Typography sx={letraStyle}>Educación</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
             <ListItemButton>
@@ -46,7 +65,7 @@ const Menu = () => {
                     <ListItemIcon>
                         <WorkOutlineOutlinedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Experiencia"/>
+                    <ListItemText><Typography sx={letraStyle}>Experiencia</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
             <ListItemButton>
@@ -54,7 +73,7 @@ const Menu = () => {
                     <ListItemIcon>
                         <ContactPhoneOutlinedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Contacto"/>
+                    <ListItemText><Typography sx={letraStyle}>Contacto</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
             <ListItemButton>
@@ -62,7 +81,7 @@ const Menu = () => {
                     <ListItemIcon>
                         <ArticleOutlinedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="CV"/>
+                    <ListItemText><Typography sx={letraStyle}>CV</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
         </List>
