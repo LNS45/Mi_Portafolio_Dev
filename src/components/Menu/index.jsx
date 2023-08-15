@@ -11,7 +11,11 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useTheme } from "@emotion/react";
+import Divider from '@mui/material/Divider';
+import Link from "@mui/material/Link";
 
 
 const Menu = (props) => {
@@ -30,13 +34,62 @@ const Menu = (props) => {
     const letraStyle = {
         fontFamily: tema.typography.fontFamily,
         fontWeight: tema.typography.fontWeight,
-        fontSize: tema.typography.fontSize
+        fontSize: tema.typography.fontSize,
+    }
+    const listStyle = {
+        "& a": {
+            textDecoration: "none",
+            color: tema.palette.primary.main
+        },
+    };
+    const interactiveAnimation = {
+        transition: ".2s",
+        "&::before": {
+            content: `""`,
+            width: "0%",
+            height: "2px",
+            background: tema.palette.primary.main,
+            position:"absolute",
+            bottom: "0",
+            left: "0",
+            transition: ".5s",
+            borderRadius: "2px",
+        },
+        "&:hover::before": {
+            content: `""`,
+            width: "100%",
+            height: "2px",
+            background: tema.palette.primary.main,
+            position:"absolute",
+            bottom: "0",
+            left: "0",
+        },
+        "&:after": {
+            content: `""`,
+            width: "0%",
+            height: "2px",
+            background: tema.palette.primary.main,
+            position:"absolute",
+            top: "0",
+            right: "0",
+            transition: ".5s",
+            borderRadius: "2px",
+        },
+        "&:hover::after": {
+            content: `""`,
+            width: "100%",
+            height: "2px",
+            background: tema.palette.primary.main,
+            position:"absolute",
+            top: "0",
+            right: "0"
+        },
+
     }
 
-    return <Drawer type="left" anchor="left" open={menuActive} variant='temporary' sx={menuStyle} hideBackdrop={true}
-    >
-        <List>
-            <ListItemButton>
+    return <Drawer type="left" anchor="left" open={menuActive} variant='temporary' sx={menuStyle} hideBackdrop={true}>
+        <List sx={listStyle}>
+            <ListItemButton sx={interactiveAnimation}>
                 <ListItem>
                     <ListItemIcon>
                         <HomeOutlinedIcon />
@@ -44,7 +97,7 @@ const Menu = (props) => {
                     <ListItemText><Typography sx={letraStyle}>Inicio</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton sx={interactiveAnimation}>
                 <ListItem>
                     <ListItemIcon>
                         <ComputerOutlinedIcon />
@@ -52,7 +105,7 @@ const Menu = (props) => {
                     <ListItemText><Typography sx={letraStyle}>Habilidades</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton sx={interactiveAnimation}>
                 <ListItem>
                     <ListItemIcon>
                         <SchoolOutlinedIcon />
@@ -60,7 +113,7 @@ const Menu = (props) => {
                     <ListItemText><Typography sx={letraStyle}>Educación</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton sx={interactiveAnimation}>
                 <ListItem>
                     <ListItemIcon>
                         <WorkOutlineOutlinedIcon />
@@ -68,7 +121,7 @@ const Menu = (props) => {
                     <ListItemText><Typography sx={letraStyle}>Experiencia</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton sx={interactiveAnimation}>
                 <ListItem>
                     <ListItemIcon>
                         <ContactPhoneOutlinedIcon />
@@ -76,7 +129,7 @@ const Menu = (props) => {
                     <ListItemText><Typography sx={letraStyle}>Contacto</Typography></ListItemText>
                 </ListItem>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton sx={interactiveAnimation}>
                 <ListItem>
                     <ListItemIcon>
                         <ArticleOutlinedIcon />
@@ -85,6 +138,33 @@ const Menu = (props) => {
                 </ListItem>
             </ListItemButton>
         </List>
+        <Divider />
+        <List sx={listStyle}>
+            <ListItemButton>
+                <Link href="https://github.com/LNS45" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon sx={{color: tema.palette.primary.main}}>
+                                <GitHubIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <Typography sx={letraStyle}>GitHub</Typography>
+                            </ListItemText>
+                    </ListItem>
+                </Link>
+            </ListItemButton>
+            <ListItemButton >
+                <Link href="https://www.linkedin.com/in/lorenzo-chavez-ingsc/" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon sx={{color: tema.palette.primary.main}}>
+                            <LinkedInIcon />
+                        </ListItemIcon>
+                        <ListItemText>
+                            <Typography sx={letraStyle}>LinkedIn</Typography>
+                        </ListItemText>
+                    </ListItem>
+                </Link>
+            </ListItemButton>
+        </List> 
     </Drawer>
 };
 

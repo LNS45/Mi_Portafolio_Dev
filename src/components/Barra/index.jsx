@@ -35,9 +35,16 @@ const Barra = ({handleMenu, handleTheme}) => {
         width: "22px",
         height: "22px"
     };
+    const menuBotonAnimation = {
+        transition: ".5s",
+        "&:hover":{
+            transform: "scale(1.2)",
+            rotate: "180deg",
+        }
+    };
     return <AppBar color='primary' sx={ appBarStyle }>
         <Toolbar variant='regular' sx={{justifyContent: "space-between", }}>
-            <IconButton size='large' color='secondary' onClick={() => handleMenu.setMenuActive(!handleMenu.menuActive)} >
+            <IconButton size='large' color='secondary' onClick={() => handleMenu.setMenuActive(!handleMenu.menuActive)} sx={menuBotonAnimation}>
                 <MenuIcon />
             </IconButton>
             <Switch icon={<WbSunnyOutlinedIcon  sx={iconStyle}/>} checkedIcon={<Brightness2OutlinedIcon sx={iconStyle}/>} onClick={() => handleTheme.setTema((prevTheme) => prevTheme === temas[0] ? 
