@@ -3,35 +3,38 @@ import { createTheme } from '@mui/material/styles';
 const typografia = (colorMain, colorDark, colorLight) => ({
     basic: {
         h1: {
-            fontSize: 50,
+            fontSize: 60,
             fontWeight: 800,
             color: colorMain,
             textShadow: "0px 0px 1px rgba(0, 0, 0, 0.70)",
+            fontFamily: 'Source Code Pro'
         },
         h2: {},
         h3: {},
         h4: {},
         h5: {
-            fontSize: 30,
+            fontSize: 40,
             fontWeight: 300,
             color: colorDark,
             textShadow: "0px 0px 2px rgba(0, 0, 0, 0.70)",
+            fontFamily: 'Source Code Pro',
         },
         h6: {},
         p: {
             fontWeight: 200, 
             fontSize: 18,
             color: colorDark,
+            fontFamily: 'Source Code Pro',
         },
         subtitle: {
             color: colorLight,
             fontSize: 30
         },
-        fontFamily: 'Saira Semi Condensed',
+        fontFamily: 'Source Code Pro',
     },
     menu: {
         fontWeight: 800,
-        fontSize: 18,
+        fontSize: 15,
     },
     presentation: {
         fontWeight: 800,
@@ -54,7 +57,7 @@ const whiteTheme = createTheme({
             light: "#FFFFFF",
         }
     },
-    typography: typografia("#1644CF", "#E9F4FF", "#FFFFFF")
+    typography: typografia("#1C4FE9", "#E9F4FF", "#FFFFFF")
 });
 const blackTheme = createTheme({
     palette: {

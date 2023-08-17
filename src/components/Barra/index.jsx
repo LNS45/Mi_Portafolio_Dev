@@ -43,7 +43,7 @@ const Barra = ({handleMenu, handleTheme}) => {
         }
     };
     return <AppBar color='primary' sx={ appBarStyle }>
-        <Toolbar variant='regular' sx={{justifyContent: "space-between", }}>
+        <Toolbar variant='regular' sx={{justifyContent: "space-between", backdropFilter:"blur(20px)", }}>
             <IconButton size='large' color='secondary' onClick={() => handleMenu.setMenuActive(!handleMenu.menuActive)} sx={menuBotonAnimation}>
                 <MenuIcon />
             </IconButton>

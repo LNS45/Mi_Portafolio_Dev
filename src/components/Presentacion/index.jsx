@@ -1,13 +1,14 @@
 import { Box, Container } from "@mui/material";
 import Informacion from "./Informacion";
 import Foto from "./Foto/Foto";
+import temas from "../../ThemeProvider";
 
-
-const Presentacion = () => {
-    
-    
+const Presentacion = ({tema}) => {
+    const fondo = (tema === temas[0]) ? "https://i0.wp.com/www.andro-life.com/wp-content/uploads/2017/08/Wallpaper-1.jpg?ssl=1" : "https://p4.wallpaperbetter.com/wallpaper/709/31/637/firewatch-dark-night-minimalism-videogame-hd-wallpaper-preview.jpg"; 
+    //https://p4.wallpaperbetter.com/wallpaper/709/31/637/firewatch-dark-night-minimalism-videogame-hd-wallpaper-preview.jpg
+    //https://fondosmil.com/fondo/13689.jpg
     const stylesBox = {
-        background: 'url("https://i0.wp.com/www.andro-life.com/wp-content/uploads/2017/08/Wallpaper-1.jpg?ssl=1")',
+        background: `url(${fondo})`,
         width: '100%',
         height: "100vh", 
         backgroundSize: "cover", 
@@ -23,7 +24,8 @@ const Presentacion = () => {
     };
     const stylesBoxFilter = { 
         width: '100vw', 
-        height: "100vh", 
+        height: "100vh",
+        backdropFilter:"blur(3px)", 
         padding: "0px", 
         position: "relative", 
         background: "linear-gradient(rgba(255,255,255, 0.1), rgba(0,0,0, .8) 80%)", 

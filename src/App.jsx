@@ -19,7 +19,7 @@ function App() {
       <ThemeProvider theme={tema}>
         <Barra handleMenu={{setMenuActive, menuActive}} handleTheme={{tema, setTema}}/>
         <Menu menu={menuActive}/>
-        <Presentacion />
+        <Presentacion tema={tema}/>
       </ThemeProvider>
     </>
   )

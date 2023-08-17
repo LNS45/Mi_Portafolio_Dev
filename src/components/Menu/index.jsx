@@ -27,7 +27,7 @@ const Menu = (props) => {
             background: tema.palette.secondary.main,
             width: "200px",
             position: "fixed",
-            top: "3.75rem",
+            top: "4rem",
             color: tema.palette.secondary.contrastText,
         },
     };
