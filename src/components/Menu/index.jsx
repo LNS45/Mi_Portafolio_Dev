@@ -32,9 +32,9 @@ const Menu = (props) => {
         },
     };
     const letraStyle = {
-        fontFamily: tema.typography.fontFamily,
-        fontWeight: tema.typography.fontWeight,
-        fontSize: tema.typography.fontSize,
+        fontFamily: tema.typography.basic.fontFamily,
+        fontWeight: tema.typography.menu.fontWeight,
+        fontSize: tema.typography.menu.fontSize,
     }
     const listStyle = {
         "& a": {

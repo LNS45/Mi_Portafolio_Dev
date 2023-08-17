@@ -1,5 +1,43 @@
-
 import { createTheme } from '@mui/material/styles';
+
+const typografia = (colorMain, colorDark, colorLight) => ({
+    basic: {
+        h1: {
+            fontSize: 50,
+            fontWeight: 800,
+            color: colorMain,
+            textShadow: "0px 0px 1px rgba(0, 0, 0, 0.70)",
+        },
+        h2: {},
+        h3: {},
+        h4: {},
+        h5: {
+            fontSize: 30,
+            fontWeight: 300,
+            color: colorDark,
+            textShadow: "0px 0px 2px rgba(0, 0, 0, 0.70)",
+        },
+        h6: {},
+        p: {
+            fontWeight: 200, 
+            fontSize: 18,
+            color: colorDark,
+        },
+        subtitle: {
+            color: colorLight,
+            fontSize: 30
+        },
+        fontFamily: 'Saira Semi Condensed',
+    },
+    menu: {
+        fontWeight: 800,
+        fontSize: 18,
+    },
+    presentation: {
+        fontWeight: 800,
+        fontSize: 18,
+    }
+});
 
 const whiteTheme = createTheme({
     palette: {
@@ -16,12 +54,7 @@ const whiteTheme = createTheme({
             light: "#FFFFFF",
         }
     },
-    typography:{
-        fontFamily: 'Saira Semi Condensed',
-        fontWeight: 800,
-        fontSize: 18,
-    }
-
+    typography: typografia("#1644CF", "#E9F4FF", "#FFFFFF")
 });
 const blackTheme = createTheme({
     palette: {
@@ -38,11 +71,7 @@ const blackTheme = createTheme({
             light: "#6BDEE4",
         }
     },
-    typography:{
-        fontFamily: 'Saira Semi Condensed',
-        fontWeight: 800,
-        fontSize: 18,
-    }
+    typography: typografia("#6BDEE4", "#3FBCC3", "#FFFFFF")
 });
 const temas = [
     whiteTheme,

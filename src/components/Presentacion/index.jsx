@@ -19,18 +19,19 @@ const Presentacion = () => {
         backgroundAttachment: "fixed",
         padding: "0",
         margin: "0",
-        zIndex: "1"
+        zIndex: "1",
     };
     const stylesBoxFilter = { 
         width: '100vw', 
         height: "100vh", 
         padding: "0px", 
         position: "relative", 
-        background: "linear-gradient(rgba(255,255,255, 0.1), rgba(0,0,0, .65))", 
+        background: "linear-gradient(rgba(255,255,255, 0.1), rgba(0,0,0, .8) 80%)", 
         zIndex: "1",
         display: "flex",
         alignItems: "center",
-        justifyContent: "Center"
+        justifyContent: "Center",
+
     };
     const stylesContainer = {
         height:"calc(100vh - 3.75rem)", 
@@ -43,6 +44,7 @@ const Presentacion = () => {
         display: "flex",
         aligntItems: "center",
         justifyContent: "space-around",
+        fontSize: "1rem",
         "& img": {
             width: "25em",
             height: "25em",
