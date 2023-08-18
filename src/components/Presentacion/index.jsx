@@ -37,7 +37,7 @@ const Presentacion = ({tema}) => {
     };
     const stylesContainer = {
         height:"calc(100vh - 3.75rem)", 
-        width: "100%", 
+        width: "90%", 
         margin: "0", 
         position: "absolute", 
         top: "3.75em",

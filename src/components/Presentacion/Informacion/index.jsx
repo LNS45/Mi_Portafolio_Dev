@@ -4,10 +4,22 @@ import {useTheme} from "@mui/material";
 const Informacion = () => {
     const tema = useTheme();
     const contenedor = {
-        width: "50%",
+        width: "100%",
+        height: "auto",
         display: "flex",
         flexDirection: "column",
-        gap:"50px"
+        gap:"50px",
+        position: "relative",
+        "@media (max-width: 768px) ": {
+            height: "300px",
+            gap: "10px",
+            "& h1": {
+                fontSize: "40px"
+            },
+            "& h5": {
+                fontSize: "25px"
+            }
+        }
     };
 
 
