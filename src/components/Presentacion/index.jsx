@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material";
 import Informacion from "./Informacion";
 import Foto from "./Foto/Foto";
 import temas from "../../ThemeProvider";
+import {Fade} from "react-awesome-reveal";
 
 const Presentacion = ({tema}) => {
     const fondo = (tema === temas[0]) ? "https://i0.wp.com/www.andro-life.com/wp-content/uploads/2017/08/Wallpaper-1.jpg?ssl=1" : "https://p4.wallpaperbetter.com/wallpaper/709/31/637/firewatch-dark-night-minimalism-videogame-hd-wallpaper-preview.jpg"; 
@@ -23,7 +24,7 @@ const Presentacion = ({tema}) => {
         zIndex: "1",
     };
     const stylesBoxFilter = { 
-        width: '100vw', 
+        width: '100%', 
         height: "100vh",
         backdropFilter:"blur(3px)", 
         padding: "0px", 
@@ -32,12 +33,12 @@ const Presentacion = ({tema}) => {
         zIndex: "1",
         display: "flex",
         alignItems: "center",
-        justifyContent: "Center",
+        justifyContent: "space-between",
 
     };
     const stylesContainer = {
         height:"calc(100vh - 3.75rem)", 
-        width: "90%", 
+        width: "100%", 
         margin: "0", 
         position: "absolute", 
         top: "3.75em",
@@ -69,7 +70,7 @@ const Presentacion = ({tema}) => {
         <Box component={'div'} sx={stylesBoxFilter}> 
             <Container component={'div'} sx={stylesContainer} maxWidth={false} disableGutters={true}>
                 <Informacion />
-                <Foto />
+                <Fade direction="down" delay="350"><Foto /></Fade>
             </Container>
         </Box>
     </Box>

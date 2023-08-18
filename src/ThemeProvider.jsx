@@ -48,7 +48,7 @@ const whiteTheme = createTheme({
             main: "#2E56D1",
             contrastText: "#FFFFFF",
             dark: "#0B33BC",
-            light: "#E9F4FF",
+            light: "#8EC5FC",
         },
         secondary: {
             main: "#E9F4FF",

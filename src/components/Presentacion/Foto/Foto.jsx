@@ -7,8 +7,8 @@ const Foto = () => {
     const tema = useTheme();
 
     const Container = {
-        width: "25.3125em",
-        height: "25.3125em",
+        width: "25.3125rem",
+        height: "25.3125rem",
         borderRadius: "100%",
         display: "flex",
         alignItems: "center",

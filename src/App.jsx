@@ -5,6 +5,7 @@ import { ThemeProvider } from '@mui/material'
 import temas from './ThemeProvider'
 import { useState } from 'react'
 import Menu from './components/Menu'
+import Tecnologias from './components/Tecnologias'
 
 function App() {
   //Tema claro por defecto
@@ -20,6 +21,7 @@ function App() {
         <Barra handleMenu={{setMenuActive, menuActive}} handleTheme={{tema, setTema}}/>
         <Menu menu={menuActive}/>
         <Presentacion tema={tema}/>
+        <Tecnologias />
       </ThemeProvider>
     </>
   )
