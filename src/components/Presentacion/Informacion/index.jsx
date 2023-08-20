@@ -29,13 +29,13 @@ const Informacion = () => {
 
     return <Box component="div" sx={contenedor}>
         <Box component="div">
-            <Fade cascade damping={0.9}>
+            <Fade cascade damping={0.5}>
                 <Typography variant="h5" sx={tema.typography.basic.h5}>Hola! Soy...</Typography>
                 <Typography variant="h1" sx={tema.typography.basic.h1}>Lorenzo Chavez</Typography>
                 <Typography variant="h5" sx={tema.typography.basic.h5}>Desarrollador Front-End</Typography>
             </Fade>
         </Box>
-        <Fade delay="300">
+        <Fade delay="200">
             <Typography variant="p" sx={tema.typography.basic.p}>Soy un apasionado programador web que le gusta trabajar en equipo, organizado y muy responsable. Me gustaría crecer y desarrollarme en un entorno donde se me desafíe y poner a prueba mis conocimientos. Siempre estoy dispuesto a aprender nuevas tecnologías y ampliar mis habilidades técnicas.
             </Typography>
 

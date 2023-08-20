@@ -28,7 +28,11 @@ const typografia = (colorMain, colorDark, colorLight) => ({
         },
         subtitle: {
             color: colorLight,
-            fontSize: 30
+            fontSize: 5
+        },
+        subtitle1: {
+            color: colorDark,
+            fontSize: 15
         },
         fontFamily: 'Source Code Pro',
     },
@@ -39,7 +43,11 @@ const typografia = (colorMain, colorDark, colorLight) => ({
     presentation: {
         fontWeight: 800,
         fontSize: 18,
-    }
+    },
+    skills: {
+        fontWeight: 800,
+        fontSize: 18,
+    },
 });
 
 const whiteTheme = createTheme({
@@ -48,7 +56,7 @@ const whiteTheme = createTheme({
             main: "#2E56D1",
             contrastText: "#FFFFFF",
             dark: "#0B33BC",
-            light: "#8EC5FC",
+            light: "#B4D7FA",
         },
         secondary: {
             main: "#E9F4FF",

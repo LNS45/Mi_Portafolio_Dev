@@ -66,11 +66,11 @@ const Presentacion = ({tema}) => {
         }
     };
 
-    return <Box component="section" sx={stylesBox}>
+    return <Box component="section" sx={stylesBox} id="Home">
         <Box component={'div'} sx={stylesBoxFilter}> 
             <Container component={'div'} sx={stylesContainer} maxWidth={false} disableGutters={true}>
                 <Informacion />
-                <Fade direction="down" delay="350"><Foto /></Fade>
+                <Fade direction="down" delay="300"><Foto /></Fade>
             </Container>
         </Box>
     </Box>

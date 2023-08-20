@@ -89,53 +89,65 @@ const Menu = (props) => {
 
     return <Drawer type="left" anchor="left" open={menuActive} variant='temporary' sx={menuStyle} hideBackdrop={true}>
         <List sx={listStyle}>
-            <ListItemButton sx={interactiveAnimation}>
-                <ListItem>
-                    <ListItemIcon>
-                        <HomeOutlinedIcon />
-                    </ListItemIcon>
-                    <ListItemText><Typography sx={letraStyle}>Inicio</Typography></ListItemText>
-                </ListItem>
+            <ListItemButton>
+                <Link href="#Home" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon>
+                            <HomeOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText><Typography sx={letraStyle}>Inicio</Typography></ListItemText>
+                    </ListItem>
+                </Link>
             </ListItemButton>
-            <ListItemButton sx={interactiveAnimation}>
-                <ListItem>
-                    <ListItemIcon>
-                        <ComputerOutlinedIcon />
-                    </ListItemIcon>
-                    <ListItemText><Typography sx={letraStyle}>Habilidades</Typography></ListItemText>
-                </ListItem>
+            <ListItemButton>
+                <Link href="#Skills" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon>
+                            <ComputerOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText><Typography sx={letraStyle}>Habilidades</Typography></ListItemText>
+                    </ListItem>
+                </Link>
             </ListItemButton>
-            <ListItemButton sx={interactiveAnimation}>
-                <ListItem>
-                    <ListItemIcon>
-                        <SchoolOutlinedIcon />
-                    </ListItemIcon>
-                    <ListItemText><Typography sx={letraStyle}>Educación</Typography></ListItemText>
-                </ListItem>
+            <ListItemButton>
+                <Link href="#Education" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon>
+                            <SchoolOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText><Typography sx={letraStyle}>Educación</Typography></ListItemText>
+                    </ListItem>
+                </Link>
             </ListItemButton>
-            <ListItemButton sx={interactiveAnimation}>
-                <ListItem>
-                    <ListItemIcon>
-                        <WorkOutlineOutlinedIcon />
-                    </ListItemIcon>
-                    <ListItemText><Typography sx={letraStyle}>Experiencia</Typography></ListItemText>
-                </ListItem>
+            <ListItemButton>
+                <Link href="#Experience" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon>
+                            <WorkOutlineOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText><Typography sx={letraStyle}>Experiencia</Typography></ListItemText>
+                    </ListItem>
+                </Link>
             </ListItemButton>
-            <ListItemButton sx={interactiveAnimation}>
-                <ListItem>
-                    <ListItemIcon>
-                        <ContactPhoneOutlinedIcon />
-                    </ListItemIcon>
-                    <ListItemText><Typography sx={letraStyle}>Contacto</Typography></ListItemText>
-                </ListItem>
+            <ListItemButton>
+                <Link href="#Contact" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon>
+                            <ContactPhoneOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText><Typography sx={letraStyle}>Contacto</Typography></ListItemText>
+                    </ListItem>
+                </Link>
             </ListItemButton>
-            <ListItemButton sx={interactiveAnimation}>
-                <ListItem>
-                    <ListItemIcon>
-                        <ArticleOutlinedIcon />
-                    </ListItemIcon>
-                    <ListItemText><Typography sx={letraStyle}>CV</Typography></ListItemText>
-                </ListItem>
+            <ListItemButton>
+                <Link href="" target="_blank" sx={interactiveAnimation}>
+                    <ListItem>
+                        <ListItemIcon>
+                            <ArticleOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText><Typography sx={letraStyle}>CV</Typography></ListItemText>
+                    </ListItem>
+                </Link>
             </ListItemButton>
         </List>
         <Divider />
