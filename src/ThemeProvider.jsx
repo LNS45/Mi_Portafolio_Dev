@@ -31,7 +31,6 @@ const typografia = (colorMain, colorDark, colorLight) => ({
             fontSize: 5
         },
         subtitle1: {
-            color: colorDark,
             fontSize: 15
         },
         fontFamily: 'Source Code Pro',
@@ -57,6 +56,7 @@ const whiteTheme = createTheme({
             contrastText: "#FFFFFF",
             dark: "#0B33BC",
             light: "#B4D7FA",
+            other: "#2E56D1"
         },
         secondary: {
             main: "#E9F4FF",
@@ -74,6 +74,7 @@ const blackTheme = createTheme({
             contrastText: "#6BDEE4",
             dark: "#1C344D",
             light: "#52798F",
+            other: "#52798F"
         },
         secondary: {
             main: "#3FBCC3",

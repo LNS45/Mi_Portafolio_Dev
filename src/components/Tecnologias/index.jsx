@@ -9,38 +9,46 @@ const Tecnologias = () => {
         {
             name: "HTML",
             icon: "https://img.icons8.com/color/48/html-5--v1.png",
+            color: "orange"
         },
         {
             name: "CSS",
-            icon: "https://img.icons8.com/color/48/css3.png"
+            icon: "https://img.icons8.com/color/48/css3.png",
+            color: "deepskyblue"
         },
         {
             name: "JS",
-            icon: "https://img.icons8.com/color/48/javascript--v1.png"
+            icon: "https://img.icons8.com/color/48/javascript--v1.png",
+            color: "yellow"
         },
         {
             name: "React JS",
-            icon: "https://img.icons8.com/color/48/react-native.png"
+            icon: "https://img.icons8.com/color/48/react-native.png",
+            color: "deepskyblue"
         },
         {
             name: "MUI",
-            icon: "https://img.icons8.com/color/48/material-ui.png"
+            icon: "https://img.icons8.com/color/48/material-ui.png",
+            color: "deepskyblue"
         },
     ];
     const BackEnd = [
         {
             name: "Java",
-            icon: "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png"
+            icon: "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png",
+            color: "tomato"
         },
         {
             name: "MySQL",
-            icon: "https://img.icons8.com/color/48/my-sql.png"
+            icon: "https://img.icons8.com/color/48/my-sql.png",
+            color: "gray"
         },
     ];
     const DiseñoUX = [
         {
             name: "Figma",
-            icon: "https://img.icons8.com/color/48/figma--v1.png"
+            icon: "https://img.icons8.com/color/48/figma--v1.png",
+            color: "darkorchid"
         },
     ];
 

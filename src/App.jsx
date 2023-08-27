@@ -13,7 +13,7 @@ function App() {
   const [menuActive, setMenuActive] = useState(false);
 
   //Color del body dependiendo del Tema
-  document.body.style.background = tema.palette.primary.light;
+  (tema === temas[0]) ? document.body.style.background = tema.palette.primary.light : document.body.style.background = tema.palette.primary.dark;
 
   return (
     <>
