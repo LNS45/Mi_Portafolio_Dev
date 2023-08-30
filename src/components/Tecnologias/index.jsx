@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import {useTheme} from "@mui/material";
 import SkillsContainer from "./SkillsContainer";
+import {Fade} from "react-awesome-reveal";
 
 
 const Tecnologias = () => {
@@ -63,10 +64,12 @@ const Tecnologias = () => {
     }
 
     return <Box sx={style} component="section" id="Skills">
-        <Typography variant="h1" sx={tema.typography.basic.h1}>Tecnologias</Typography>
-        <SkillsContainer list={FrontEnd}/>
-        <SkillsContainer list={BackEnd}/>
-        <SkillsContainer list={DiseñoUX}/>
+        <Fade direction="down" delay="50">
+            <Typography variant="h1" sx={tema.typography.basic.h1}>Tecnologias</Typography>
+        </Fade>
+        <SkillsContainer list={FrontEnd} category="Front-End"/>
+        <SkillsContainer list={BackEnd} category="Back-End"/>
+        <SkillsContainer list={DiseñoUX} category="Diseño UX/UI"/>
     </Box>
 };
 

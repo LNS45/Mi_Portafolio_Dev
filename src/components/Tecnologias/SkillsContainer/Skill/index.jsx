@@ -51,9 +51,9 @@ const Skill = ({skill}) => {
     }
 
     return <Box component="div" sx={styleSkill} className="containerAnimation">
-        <img src={skill.icon} alt={`Icono de ${skill.name}`}/>
-        <Typography  sx={tema.typography.basic.subtitle1}>{skill.name}</Typography>
-    </Box>
+            <img src={skill.icon} alt={`Icono de ${skill.name}`}/>
+            <Typography  sx={tema.typography.basic.subtitle1}>{skill.name}</Typography>
+        </Box>
 }
 
 export default Skill;

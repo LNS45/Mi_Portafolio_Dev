@@ -14,7 +14,7 @@ const Barra = ({handleMenu, handleTheme}) => {
     const appBarStyle = {
         height: "3.75rem",
         background: colorOpaco,
-        zIndex: 2,
+        zIndex: 5,
     };
     const botonTemaStyle = {
         width: "60px",

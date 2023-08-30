@@ -22,7 +22,7 @@ const Menu = (props) => {
     const menuActive = props.menu;
     const tema = useTheme();
     const menuStyle = {
-        zIndex: 1,
+        zIndex: 4,
         '& .MuiDrawer-paper': {
             background: tema.palette.secondary.main,
             width: "200px",
