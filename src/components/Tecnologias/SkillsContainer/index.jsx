@@ -46,7 +46,7 @@ const SkillsContainer = ({list, category}) => {
             },
         }
     }
-    return <Fade direction="right" delay="50">
+    return <Fade direction="right" delay="50" triggerOnce>
         <Box sx={styleContainer}>
             {list.map((skill, index) => (
                 <Skill skill={skill} key={index}/>

@@ -19,7 +19,14 @@ const typografia = (colorMain, colorDark, colorLight) => ({
             textShadow: "0px 0px 2px rgba(0, 0, 0, 0.70)",
             fontFamily: 'Source Code Pro',
         },
-        h6: {},
+        h6: {
+            fontSize: 20,
+            fontWeight: 300,
+            color: colorDark,
+            textShadow: "0px 0px 2px rgba(0, 0, 0, 0.70)",
+            fontFamily: 'Source Code Pro',
+            textAlign: "center",
+        },
         p: {
             fontWeight: 200, 
             fontSize: 18,

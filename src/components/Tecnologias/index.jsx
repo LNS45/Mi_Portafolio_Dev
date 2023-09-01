@@ -64,8 +64,8 @@ const Tecnologias = () => {
     }
 
     return <Box sx={style} component="section" id="Skills">
-        <Fade direction="down" delay="50">
-            <Typography variant="h1" sx={tema.typography.basic.h1}>Tecnologias</Typography>
+        <Fade direction="down" delay="50" triggerOnce>
+            <Typography variant="h1" sx={tema.typography.basic.h1}>Tecnologías</Typography>
         </Fade>
         <SkillsContainer list={FrontEnd} category="Front-End"/>
         <SkillsContainer list={BackEnd} category="Back-End"/>
