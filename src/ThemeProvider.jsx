@@ -20,18 +20,19 @@ const typografia = (colorMain, colorDark, colorLight) => ({
             fontFamily: 'Source Code Pro',
         },
         h6: {
-            fontSize: 20,
-            fontWeight: 300,
+            fontSize: 18,
+            fontWeight: 500,
             color: colorDark,
             textShadow: "0px 0px 2px rgba(0, 0, 0, 0.70)",
             fontFamily: 'Source Code Pro',
             textAlign: "center",
         },
         p: {
-            fontWeight: 200, 
+            fontWeight: 300, 
             fontSize: 18,
             color: colorDark,
             fontFamily: 'Source Code Pro',
+            textShadow: "0px 0px 2px rgba(0, 0, 0, 0.70)",
         },
         subtitle: {
             color: colorLight,

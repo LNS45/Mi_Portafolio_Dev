@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Menu from './components/Menu'
 import Tecnologias from './components/Tecnologias'
 import Formacion from './components/Formacion'
+import Experiencia from './components/Experiencia'
 
 function App() {
   //Tema claro por defecto
@@ -24,6 +25,7 @@ function App() {
         <Presentacion tema={tema}/>
         <Tecnologias />
         <Formacion />
+        <Experiencia />
       </ThemeProvider>
     </>
   )

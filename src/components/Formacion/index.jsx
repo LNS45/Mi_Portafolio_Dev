@@ -3,6 +3,7 @@ import {Fade} from "react-awesome-reveal";
 import {useTheme} from "@mui/material";
 import EducationContainer from "./EducationContainer";
 
+
 const Formacion = () => {
     const tema = useTheme();
     const formStyle = {
